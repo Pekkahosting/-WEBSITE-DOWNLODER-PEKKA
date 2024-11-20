@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta property="og:image" content="https://files.catbox.moe/vgf0p2.jpeg" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="https://files.catbox.moe/f6gl2h.jpeg" type="image/jpeg">
+      <meta name="description" content="download vidio tanpa wm tiktok 2024">
+    <meta name="author" content="abdullz">
+    <title>TikTok Downloader PekkaOfficial</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Roboto, sans-serif;
+        }
+
+        body {
+            color: #fff;
+            background: url('https://files.catbox.moe/qoqx20.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: auto;
+            min-height: 100vh;
+        }
+
+#download-info {
+    margin-top: 10px;
+    text-align: left; 
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#download-info p {
+    margin-bottom: 5px; 
+}
+
+        .container {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .shape {
+            background: rgba(50, 50, 50, 0.8);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .input-section {
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #ff6f;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 1em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 1em;
+            background-color: yellow;
+            color: black;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        .profile-info {
+            font-size: 1.2em;
+            color: #ddd;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+        }
+
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 3;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .opposites {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            animation: opposites 2.5s ease-out 0s infinite;
+        }
+
+        .tl, .tr, .br, .bl {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+        }
+
+        .tl, .tr {
+            top: 0; 
+        }
+
+        .tr, .br {
+            left: 30px; 
+        }
+
+        .tl, .br {
+            animation: tlbr 2.5s ease-out 0s infinite;
+        }
+
+        .br, .bl {
+            top: 30px; 
+        }
+
+        .tl, .bl {
+            left: 0; 
+        }
+
+        .tr, .bl {
+            animation: trbl 2.5s ease-out 0s infinite;
+        }
+
+        .tl {
+            background: cyan;
+            transform-origin: bottom right;
+        }
+
+        .tr {
+            background: green; 
+            transform-origin: bottom left;
+        }
+
+        .br {
+            background: dodgerblue; 
+            transform-origin: top left;
+        }
+
+        .bl {
+            background: gold; 
+            transform-origin: top right;
+        }
+
+        @keyframes tlbr {
+            0% {transform: rotate(0);}
+            20% {transform: rotate(90deg);}
+            40% {transform: rotate(90deg);}
+            60% {transform: rotate(0);}
+        }
+
+        @keyframes trbl {
+            20% {transform: rotate(0);}
+            40% {transform: rotate(90deg);}
+            60% {transform: rotate(90deg);}
+            80% {transform: rotate(0);}
+        }
+
+        @keyframes opposites {
+            80% {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+
+        /* Card Petunjuk */
+        .guide-card {
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .guide-card h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #ff6f61;
+        }
+
+        .guide-card p {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+        
+    
+    .footer {
+        position: absolute; 
+        bottom: 0; 
+        left: 50%;
+        transform: translateX(-50%);
+
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 1em;
+        width: 100%;
+        z-index: 100; 
+    }
+
+    .footer a {
+        color: yellow;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .footer a:hover {
+        text-decoration: underline;
+    }
+
+    .footer strong {
+        color: cyan; 
+    }
+
+  
+    .container {
+        padding-bottom: 100px; /* Memberikan cukup ruang agar footer tidak menutupi konten */
+    }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="shape input-section">
+            <h1>TikTok Downloader</h1>
+            <input type="text" id="url" placeholder="Masukkan tautan TikTok di sini">
+            <button onclick="downloadVideo()">PEKKAOFFICIAL🚀</button>
+        </div>
+<div class="footer">
+    <p>silahkan hubungi email kami jika terjadi eror: <a href="mailto:pekkahosting5@gmail.com">pekkahosting5@gmail.com</a></p>
+    <br>
+    <p>MASA PERCOBAAN <strong> BANTU NILAI</strong></p>
+    </div>
+        <!-- Shape 2: Username & Nickname -->
+        <div class="shape profile-info" id="profile-info" style="display: none;">
+            <p id="nickname"></p>
+            <p id="username"></p>
+        </div>
+
+        <!-- Shape 3: Video, Info & Buttons -->
+        <div class="shape video-container" id="video-section" style="display: none;">
+            <video id="video" controls></video>
+            <div id="download-info" style="margin-top: 10px;"></div>
+            <div class="button-group">
+                <button id="download-video" style="display: none;">Unduh Video</button>
+                <button id="download-audio" style="display: none;">Unduh Audio</button>
+            </div>
+        </div>
+  
+        <p id="message"></p>
+
+        <!-- Card Petunjuk -->
+        <div class="guide-card" style="display: none;" id="guide-card">
+            <h2>Cara Mengunduh</h2>
+            <p>Setelah video berhasil diproses, Anda dapat mengunduhnya dalam dua format:</p>
+            <ul>
+                <li><strong>Unduh Video</strong>: Klik tombol "Unduh Video" untuk mengunduh video tanpa watermark.</li>
+                <li><strong>Unduh Audio</strong>: Klik tombol "Unduh Audio" untuk mengunduh audio dari video.</li>
+            </ul>
+            <p>Pastikan Anda memilih format yang diinginkan, dan nikmati hasilnya guys.</p>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="opposites">
+            <div class="tl"></div>
+            <div class="tr"></div>
+            <div class="br"></div>
+            <div class="bl"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        async function tiktok2(query) {
+            return new Promise(async (resolve, reject) => {
+                try {
+                    const encodedParams = new URLSearchParams();
+                    encodedParams.set('url', query);
+                    encodedParams.set('hd', '1');
+
+                    const response = await axios.post('https://tikwm.com/api/', encodedParams, {
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                            'User-Agent': 'Mozilla/5.0'
+                        }
+                    });
+
+                    const videoData = response.data.data;
+                    if (!videoData) {
+                        throw new Error("Data video tidak ditemukan.");
+                    }
+
+                    const result = {
+                        title: videoData.title,
+                        no_watermark: videoData.play,
+                        music: videoData.music,
+                        nickname: videoData.author.nickname,
+                        username: videoData.author.unique_id,
+                        likes: videoData.digg_count,
+                        comments: videoData.comment_count,
+                        shares: videoData.share_count,
+                        play: videoData.play_count,
+                        created: videoData.create_time,
+                        size: videoData.size,
+                        duration: videoData.duration,
+                        region: videoData.region,
+                        album: videoData.music.album,
+                        musicAuthor: videoData.music.author
+                    };
+                    resolve(result);
+                } catch (error) {
+                    console.error("Error:", error);
+                    reject("Maaf, terjadi kesalahan saat mengunduh video. Pastikan link yang kamu tempel benar!");
+                }
+            });
+        }
+
+        async function downloadVideo() {
+            const url = document.getElementById('url');
+            const loadingOverlay = document.getElementById('loading-overlay');
+            const message = document.getElementById('message');
+            const videoSection = document.getElementById('video-section');
+            const videoElement = document.getElementById('video');
+            const downloadInfoElement = document.getElementById('download-info');
+            const nicknameElement = document.getElementById('nickname');
+            const usernameElement = document.getElementById('username');
+            const profileInfo = document.getElementById('profile-info');
+            const downloadVideoBtn = document.getElementById('download-video');
+            const downloadAudioBtn = document.getElementById('download-audio');
+            const guideCard = document.getElementById('guide-card');
+
+            message.textContent = "";
+            videoSection.style.display = "none";
+            profileInfo.style.display = "none";
+            guideCard.style.display = "none";
+            loadingOverlay.style.display = "flex";
+
+            try {
+                const videoInfo = await tiktok2(url.value);
+
+                nicknameElement.textContent = videoInfo.nickname;
+                usernameElement.textContent = "@" + videoInfo.username;
+
+                downloadInfoElement.innerHTML = `
+                    <p><strong>DOWNLOAD SELESAI 🚀✅</strong></p>
+                    <p><strong>Video Info</strong> :</p>
+                    <p>Region : ${videoInfo.region}</p>
+                    <p>Duration : ${Math.floor(videoInfo.duration / 60)}:${videoInfo.duration % 60}</p>
+                    <p>Taken : ${new Date(videoInfo.created * 1000).toLocaleString()}</p>
+                    <p>Size : ${(videoInfo.size / 1024 / 1024).toFixed(2)} MB</p>
+
+                    <p><strong>Statistik Info 📊</strong> :</p>
+                    <p>Views : ${videoInfo.play}</p>
+                    <p>Likes : ${videoInfo.likes}</p>
+                    <p>Comment : ${videoInfo.comments}</p>
+                    <p>Share : ${videoInfo.shares}</p>
+                    
+                    <p><strong>Author Info 👤</strong> :</p>
+                    <p>Fullname : ${videoInfo.nickname}</p>
+                    <p>Nickname : @${videoInfo.username}</p>
+                    
+                    <br>
+                    <p><strong>@DOWNLOADER BY PEKKAOFFICIAL🚀</strong></p>
+                `;
+                
+
+                videoElement.src = videoInfo.no_watermark;
+                profileInfo.style.display = "block";
+                videoSection.style.display = "block";
+                downloadVideoBtn.style.display = "inline";
+                downloadAudioBtn.style.display = "inline";
+                guideCard.style.display = "block";  
+
+                downloadVideoBtn.onclick = () => downloadFile(videoInfo.no_watermark, "video.mp4");
+                downloadAudioBtn.onclick = () => downloadFile(videoInfo.music, "audio.mp3");
+            } catch (error) {
+                message.textContent = error;
+            } finally {
+                loadingOverlay.style.display = "none";
+            }
+        }
+
+        function downloadFile(url, filename) {
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+</body>
+  </html>
